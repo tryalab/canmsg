@@ -15,6 +15,7 @@
         }
     },
     "defines": {
+        "CAN_SPEED": 250000,
         "states": ["OFF", "ON"],
         "status": ["OKAY", "ERROR"],
         "window": ["CLOSED", "OPENED"],
