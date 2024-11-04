@@ -39,8 +39,8 @@
                 {"name": "hmi_node_status",                              "type": "uint8_t",  "start": 20, "length":  2, "values": "system",    "getters": ["hmi", "com"],        "comment": "the hmi status"},
                 {"name": "calibrate_light_system",                       "type": "uint8_t",  "start": 22, "length":  1, "values": "states",    "getters": ["sns", "hmi", "com"], "comment": "the light system calibration signal"},
                 {"name": "water_volume_target_max",     "default": 300,  "type": "uint16_t", "start": 23, "length": 11, "range" : [100, 2047], "getters": ["act", "hmi", "com"], "comment": "the max used water in a watering cycle"},
-                {"name": "lamp_brightness_ldr_min",     "default": 100,  "type": "uint16_t", "start": 34, "length": 12, "range" : [0, 4095],   "getters": ["sns", "hmi", "com"], "comment": "the LDR value when the lamp is completely on and there is no environment light"},
-                {"name": "lamp_brightness_ldr_max",     "default": 4000, "type": "uint16_t", "start": 46, "length": 12, "range" : [0, 4095],   "getters": ["sns", "hmi", "com"], "comment": "the LDR value when the lamp is completely off and there is no environment light"}
+                {"name": "brightness_ldr_min",          "default": 50,   "type": "uint16_t", "start": 34, "length": 12, "range" : [0, 4095],   "getters": ["sns", "hmi", "com"], "comment": "the LDR value when the lamp is completely on and there is environment light"},
+                {"name": "brightness_ldr_max",          "default": 4000, "type": "uint16_t", "start": 46, "length": 12, "range" : [0, 4095],   "getters": ["sns", "hmi", "com"], "comment": "the LDR value when the lamp is completely off and there is no environment light"}
             ]
         },
         {
@@ -74,7 +74,7 @@
             "id": "0x103",
             "setter": "sns",
             "signals": [
-                {"name": "lamp_brightness_calibration_value", "type": "uint16_t", "start":  0, "length": 12, "range" : [0, 4095],  "getters": ["hmi"],                      "comment": "the LDR calibration values when the lamp is completely on/off and there is no environment light"},
+                {"name": "brightness_calibration_value",      "type": "uint16_t", "start":  0, "length": 12, "range" : [0, 4095],  "getters": ["hmi"],                      "comment": "the LDR raw values"},
                 {"name": "temperature",                       "type": "float",    "start":  0, "length":  9, "range": [0.0, 50.0], "getters": ["act", "hmi", "com"],        "comment": "the ambient temperature"},
                 {"name": "humidity",                          "type": "uint8_t",  "start":  9, "length":  7, "range": [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the ambient humidity"},
                 {"name": "dht_sensor_status",                 "type": "uint8_t",  "start": 16, "length":  2, "values": "system",   "getters": ["act", "hmi", "com", "sns"], "comment": "the dht sensor status"},
