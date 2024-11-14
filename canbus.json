@@ -86,7 +86,7 @@
                 {"name": "water_level_sensor_status",         "type": "uint8_t",  "start": 46, "length":  2, "values": "system",   "getters": ["act", "hmi", "com", "sns"], "comment": "the water level sensor status"},
                 {"name": "soil_moisture",                     "type": "uint8_t",  "start": 48, "length":  7, "range": [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the soil moisture"},
                 {"name": "soil_moisture_sensor_status",       "type": "uint8_t",  "start": 55, "length":  2, "values": "system",   "getters": ["act", "hmi", "com", "sns"], "comment": "the soil moisture sensor status"},
-                {"name": "sensor_can_status",                 "type": "uint8_t",  "start": 57, "length":  1, "values": "status",   "getters": ["act", "hmi", "com", "sns"], "comment": "the CAN communication status"},
+                {"name": "sensor_can_status",                 "type": "uint8_t",  "start": 57, "length":  1, "values": "status",   "getters": ["hmi", "com", "sns"],        "comment": "the CAN communication status"},
                 {"name": "sensor_node_status",                "type": "uint8_t",  "start": 58, "length":  2, "values": "system",   "getters": ["hmi", "com"],               "comment": "the sensor node status"}
             ]
         },
