@@ -94,10 +94,10 @@
             "id": "0x104",
             "setter": "act",
             "signals": [
-                {"name": "water_pump_state",     "type":"uint8_t", "start":  0, "length": 1, "values":"states", "getters":["sns", "com", "hmi", "act"],        "comment": "the water pump state"},
+                {"name": "water_pump_state",     "type":"uint8_t", "start":  0, "length": 1, "values":"states", "getters":["sns", "com", "hmi", "act"], "comment": "the water pump state"},
                 {"name": "water_pump_status",    "type":"uint8_t", "start":  1, "length": 1, "values":"status", "getters":["sns", "com", "hmi", "act"], "comment": "the water pump status"},
-                {"name": "lamp_intensity_level", "type":"uint8_t", "start":  2, "length": 7, "range" :[0, 100], "getters":["sns", "com", "hmi"],        "comment": "the lamp light intensity"},
-                {"name": "lamp_status",          "type":"uint8_t", "start":  9, "length": 1, "values":"status", "getters":["sns", "com", "hmi", "act"], "comment": "the lamp status"},
+                {"name": "lamp_intensity_level", "type":"uint8_t", "start":  2, "length": 7, "range" :[0, 100], "getters":["com", "hmi"],               "comment": "the lamp light intensity"},
+                {"name": "lamp_status",          "type":"uint8_t", "start":  9, "length": 1, "values":"status", "getters":["com", "hmi", "act"],        "comment": "the lamp status"},
                 {"name": "fan_state",            "type":"uint8_t", "start": 10, "length": 1, "values":"states", "getters":["com", "hmi"],               "comment": "the air fan state"},
                 {"name": "fan_status",           "type":"uint8_t", "start": 11, "length": 1, "values":"status", "getters":["com", "hmi", "act"],        "comment": "the air fan status"},
                 {"name": "heater_state",         "type":"uint8_t", "start": 12, "length": 1, "values":"states", "getters":["com", "hmi"],               "comment": "the heating element state"},
