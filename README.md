@@ -1,2 +1,2 @@
-# CAN Bus
+# CAN Messages
 

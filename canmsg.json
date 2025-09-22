@@ -28,19 +28,18 @@
             "id": "0x100",
             "setter": "hmi",
             "signals": [
-                {"name": "heater_manual_state",         "control": true, "type": "uint8_t",  "start":  0, "length":  2, "values": "states",    "getters": ["act", "hmi", "com"], "comment": "the heating element manual state"},
-                {"name": "window_manual_state",         "control": true, "type": "uint8_t",  "start":  2, "length":  2, "values": "window",    "getters": ["act", "hmi", "com"], "comment": "the window manual state"},
-                {"name": "fans_manual_state",           "control": true, "type": "uint8_t",  "start":  4, "length":  2, "values": "states",    "getters": ["act", "hmi", "com"], "comment": "the fans manual state"},
-                {"name": "water_pump_manual_state",     "control": true, "type": "uint8_t",  "start":  6, "length":  2, "values": "states",    "getters": ["act", "hmi", "com"], "comment": "the water pumpmanual state"},
-                {"name": "lamp_manual_light_intensity", "control": true, "type": "uint8_t",  "start":  8, "length":  8, "range" : [0, 100],    "getters": ["act", "hmi", "com"], "comment": "the lamp manual light intensity"},
-                {"name": "system_status",                                "type": "uint8_t",  "start": 16, "length":  2, "values": "system",    "getters": ["hmi", "com"],        "comment": "the system status"},
-                {"name": "eeprom_status",                                "type": "uint8_t",  "start": 18, "length":  1, "values": "status",    "getters": ["hmi", "com"],        "comment": "the EEPROM status"},
-                {"name": "hmi_can_status",                               "type": "uint8_t",  "start": 19, "length":  1, "values": "status",    "getters": ["hmi", "com"],        "comment": "the CAN communication status"},
-                {"name": "hmi_node_status",                              "type": "uint8_t",  "start": 20, "length":  2, "values": "system",    "getters": ["hmi", "com"],        "comment": "the hmi status"},
-                {"name": "calibrate_light_system",                       "type": "uint8_t",  "start": 22, "length":  1, "values": "states",    "getters": ["sns", "hmi", "com"], "comment": "the light system calibration signal"},
-                {"name": "water_volume_target_max",     "default": 300,  "type": "uint16_t", "start": 23, "length": 11, "range" : [100, 2047], "getters": ["act", "hmi", "com"], "comment": "the max used water in a watering cycle"},
-                {"name": "brightness_ldr_min",          "default": 50,   "type": "uint16_t", "start": 34, "length": 12, "range" : [0, 4095],   "getters": ["sns", "hmi", "com"], "comment": "the LDR value when the lamp is completely on and there is environment light"},
-                {"name": "brightness_ldr_max",          "default": 4000, "type": "uint16_t", "start": 46, "length": 12, "range" : [0, 4095],   "getters": ["sns", "hmi", "com"], "comment": "the LDR value when the lamp is completely off and there is no environment light"}
+                {"name": "heater_manual_state",         "control": true, "type": "uint8_t",  "start":  0, "length":  2, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the heating element manual state"},
+                {"name": "window_manual_state",         "control": true, "type": "uint8_t",  "start":  2, "length":  2, "values": "window",  "getters": ["act", "hmi", "com"], "comment": "the window manual state"},
+                {"name": "fans_manual_state",           "control": true, "type": "uint8_t",  "start":  4, "length":  2, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the fans manual state"},
+                {"name": "water_pump_manual_state",     "control": true, "type": "uint8_t",  "start":  6, "length":  2, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the water pumpmanual state"},
+                {"name": "lamp_manual_light_intensity", "control": true, "type": "uint8_t",  "start":  8, "length":  8, "range" : [0, 100],  "getters": ["act", "hmi", "com"], "comment": "the lamp manual light intensity"},
+                {"name": "system_status",                                "type": "uint8_t",  "start": 16, "length":  2, "values": "system",  "getters": ["hmi", "com"],        "comment": "the system status"},
+                {"name": "eeprom_status",                                "type": "uint8_t",  "start": 18, "length":  1, "values": "status",  "getters": ["hmi", "com"],        "comment": "the EEPROM status"},
+                {"name": "hmi_can_status",                               "type": "uint8_t",  "start": 19, "length":  1, "values": "status",  "getters": ["hmi", "com"],        "comment": "the CAN communication status"},
+                {"name": "hmi_node_status",                              "type": "uint8_t",  "start": 20, "length":  2, "values": "system",  "getters": ["hmi", "com"],        "comment": "the hmi status"},
+                {"name": "calibrate_light_system",                       "type": "uint8_t",  "start": 22, "length":  1, "values": "states",  "getters": ["sns", "hmi", "com"], "comment": "the light system calibration signal"},
+                {"name": "brightness_possible_max",     "default": 50,   "type": "uint16_t", "start": 23, "length": 12, "range" : [0, 4095], "getters": ["sns", "hmi", "com"], "comment": "the LDR value when the lamp is completely on and there is environment light"},
+                {"name": "brightness_possible_min",     "default": 4000, "type": "uint16_t", "start": 35, "length": 12, "range" : [0, 4095], "getters": ["sns", "hmi", "com"], "comment": "the LDR value when the lamp is completely off and there is no environment light"}
             ]
         },
         {
@@ -61,13 +60,12 @@
             "id": "0x102",
             "setter": "hmi",
             "signals": [
-                {"name": "watering_time_max",          "default": 15, "type": "uint8_t", "start":  0, "length": 5, "range": [10, 31], "getters": ["act", "hmi", "com"], "comment": "the max time for watering"},
-                {"name": "light_intensity_target_min", "default": 50, "type": "uint8_t", "start":  5, "length": 7, "range": [0, 100], "getters": ["act", "hmi", "com"], "comment": "the min light intensity"},
-                {"name": "light_intensity_target_max", "default": 80, "type": "uint8_t", "start": 11, "length": 7, "range": [0, 100], "getters": ["act", "hmi", "com"], "comment": "the max light intensity"},
-                {"name": "temperature_possible_min",   "default": 10, "type": "uint8_t", "start": 18, "length": 7, "range": [0, 50],  "getters": ["sns", "hmi", "com"], "comment": "the min possible temperature"},
-                {"name": "temperature_possible_max",   "default": 30, "type": "uint8_t", "start": 25, "length": 7, "range": [0, 50],  "getters": ["sns", "hmi", "com"], "comment": "the max possible temperature"},
-                {"name": "humidity_possible_min",      "default": 10, "type": "uint8_t", "start": 32, "length": 7, "range": [0, 100], "getters": ["sns", "hmi", "com"], "comment": "the min possible humidity"},
-                {"name": "humidity_possible_max",      "default": 50, "type": "uint8_t", "start": 39, "length": 7, "range": [0, 100], "getters": ["sns", "hmi", "com"], "comment": "the max possible humidity"}
+                {"name": "watering_time_max",          "default": 15,  "type": "uint8_t",  "start":  0, "length":  5, "range": [10, 31],    "getters": ["act", "hmi", "com"], "comment": "the max time for a watering cycle"},
+                {"name": "watering_volume_max",        "default": 300, "type": "uint16_t", "start":  5, "length": 11, "range": [100, 2047], "getters": ["act", "hmi", "com"], "comment": "the max used water in a watering cycle"},
+                {"name": "light_intensity_target_min", "default": 50,  "type": "uint8_t",  "start": 16, "length":  7, "range": [0, 100],    "getters": ["act", "hmi", "com"], "comment": "the min light intensity"},
+                {"name": "light_intensity_target_max", "default": 80,  "type": "uint8_t",  "start": 23, "length":  7, "range": [0, 100],    "getters": ["act", "hmi", "com"], "comment": "the max light intensity"},
+                {"name": "temperature_possible_min",   "default": 10,  "type": "uint8_t",  "start": 30, "length":  7, "range": [0, 50],     "getters": ["sns", "hmi", "com"], "comment": "the min possible temperature"},
+                {"name": "temperature_possible_max",   "default": 30,  "type": "uint8_t",  "start": 37, "length":  7, "range": [0, 50],     "getters": ["sns", "hmi", "com"], "comment": "the max possible temperature"}
             ] 
         },
         {
@@ -78,7 +76,7 @@
                 {"name": "temperature",                       "type": "float",    "start":  0, "length":  9, "range" : [0.0, 50.0], "getters": ["act", "hmi", "com"],        "comment": "the ambient temperature"},
                 {"name": "humidity",                          "type": "uint8_t",  "start":  9, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the ambient humidity"},
                 {"name": "dht_sensor_status",                 "type": "uint8_t",  "start": 16, "length":  2, "values": "system",    "getters": ["act", "hmi", "com", "sns"], "comment": "the dht sensor status"},
-                {"name": "flow_rate",         "update": true, "type": "uint16_t", "start": 18, "length": 10, "range" : [0, 500],    "getters": ["act", "hmi", "com"],        "comment": "the flow rate"},
+                {"name": "flow_rate",         "update": true, "type": "uint16_t", "start": 18, "length": 10, "range" : [15, 500],   "getters": ["act", "hmi", "com"],        "comment": "the flow rate"},
                 {"name": "flow_rate_sensor_status",           "type": "uint8_t",  "start": 28, "length":  2, "values": "system",    "getters": ["act", "hmi", "com", "sns"], "comment": "the flow rate sensor status"},
                 {"name": "light_intensity",                   "type": "uint8_t",  "start": 30, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the light intensity"},
                 {"name": "light_sensor_status",               "type": "uint8_t",  "start": 37, "length":  2, "values": "system",    "getters": ["act", "hmi", "com", "sns"], "comment": "the light intensity sensor status"},
@@ -94,10 +92,10 @@
             "id": "0x104",
             "setter": "act",
             "signals": [
-                {"name": "water_pump_state",     "type":"uint8_t", "start":  0, "length": 1, "values":"states", "getters":["sns", "com", "hmi", "act"], "comment": "the water pump state"},
+                {"name": "water_pump_state",     "type":"uint8_t", "start":  0, "length": 1, "values":"states", "getters":["sns", "com", "hmi"],        "comment": "the water pump state"},
                 {"name": "water_pump_status",    "type":"uint8_t", "start":  1, "length": 1, "values":"status", "getters":["sns", "com", "hmi", "act"], "comment": "the water pump status"},
-                {"name": "lamp_intensity_level", "type":"uint8_t", "start":  2, "length": 7, "range" :[0, 100], "getters":["com", "hmi"],               "comment": "the lamp light intensity"},
-                {"name": "lamp_status",          "type":"uint8_t", "start":  9, "length": 1, "values":"status", "getters":["com", "hmi", "act"],        "comment": "the lamp status"},
+                {"name": "lamp_intensity_level", "type":"uint8_t", "start":  2, "length": 7, "range" :[0, 100], "getters":["sns", "com", "hmi"],        "comment": "the lamp light intensity"},
+                {"name": "lamp_status",          "type":"uint8_t", "start":  9, "length": 1, "values":"status", "getters":["sns", "com", "hmi", "act"], "comment": "the lamp status"},
                 {"name": "fan_state",            "type":"uint8_t", "start": 10, "length": 1, "values":"states", "getters":["com", "hmi"],               "comment": "the air fan state"},
                 {"name": "fan_status",           "type":"uint8_t", "start": 11, "length": 1, "values":"status", "getters":["com", "hmi", "act"],        "comment": "the air fan status"},
                 {"name": "heater_state",         "type":"uint8_t", "start": 12, "length": 1, "values":"states", "getters":["com", "hmi"],               "comment": "the heating element state"},
