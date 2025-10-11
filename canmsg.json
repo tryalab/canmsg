@@ -1,4 +1,5 @@
 {
+    "speed": 250000,
     "nodes": {
         "hmi": {
             "name": "HMI"
@@ -15,7 +16,6 @@
         }
     },
     "defines": {
-        "CAN_SPEED": 250000,
         "states": ["OFF", "ON"],
         "status": ["OKAY", "ERROR"],
         "window": ["CLOSED", "OPENED"],
@@ -28,23 +28,23 @@
             "id": "0x100",
             "setter": "hmi",
             "signals": [
-                {"name": "heater_manual_mode",                           "type": "uint8_t",  "start":  0, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the heating element manual mode"},
-                {"name": "heater_manual_state",                          "type": "uint8_t",  "start":  1, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the heating element manual state"},
-                {"name": "window_manual_mode",                           "type": "uint8_t",  "start":  2, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the window manual mode"},
-                {"name": "window_manual_state",                          "type": "uint8_t",  "start":  3, "length":  1, "values": "window",  "getters": ["act", "hmi", "com"], "comment": "the window manual state"},
-                {"name": "fans_manual_mode",                             "type": "uint8_t",  "start":  4, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the fans manual mode"},
-                {"name": "fans_manual_state",                            "type": "uint8_t",  "start":  5, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the fans manual state"},
-                {"name": "water_pump_manual_mode",                       "type": "uint8_t",  "start":  6, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the water pump manual mode"},
-                {"name": "water_pump_manual_state",                      "type": "uint8_t",  "start":  7, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the water pump manual state"},
-                {"name": "lamp_manual_mode",                             "type": "uint8_t",  "start":  8, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the lamp manual mode"},
-                {"name": "lamp_manual_light_intensity",                  "type": "uint8_t",  "start":  9, "length":  7, "range" : [0, 100],  "getters": ["act", "hmi", "com"], "comment": "the lamp manual light intensity"},
-                {"name": "system_status",                                "type": "uint8_t",  "start": 16, "length":  2, "values": "system",  "getters": ["hmi", "com"],        "comment": "the system status"},
-                {"name": "eeprom_status",                                "type": "uint8_t",  "start": 18, "length":  1, "values": "status",  "getters": ["hmi", "com"],        "comment": "the EEPROM status"},
-                {"name": "hmi_can_status",                               "type": "uint8_t",  "start": 19, "length":  1, "values": "status",  "getters": ["hmi", "com"],        "comment": "the CAN communication status"},
-                {"name": "hmi_node_status",                              "type": "uint8_t",  "start": 20, "length":  2, "values": "system",  "getters": ["hmi", "com"],        "comment": "the hmi status"},
-                {"name": "calibrate_light_system",                       "type": "uint8_t",  "start": 22, "length":  1, "values": "states",  "getters": ["sns", "hmi", "com"], "comment": "the light system calibration signal"},
-                {"name": "brightness_possible_max",     "default": 50,   "type": "uint16_t", "start": 23, "length": 12, "range" : [0, 4095], "getters": ["sns", "hmi", "com"], "comment": "the LDR value when the lamp is completely on and there is environment light"},
-                {"name": "brightness_possible_min",     "default": 4000, "type": "uint16_t", "start": 35, "length": 12, "range" : [0, 4095], "getters": ["sns", "hmi", "com"], "comment": "the LDR value when the lamp is completely off and there is no environment light"}
+                {"name": "heater_manual_mode",                       "type": "uint8_t",  "start":  0, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the heating element manual mode"},
+                {"name": "heater_manual_state",                      "type": "uint8_t",  "start":  1, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the heating element manual state"},
+                {"name": "window_manual_mode",                       "type": "uint8_t",  "start":  2, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the window manual mode"},
+                {"name": "window_manual_state",                      "type": "uint8_t",  "start":  3, "length":  1, "values": "window",  "getters": ["act", "hmi", "com"], "comment": "the window manual state"},
+                {"name": "fans_manual_mode",                         "type": "uint8_t",  "start":  4, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the fans manual mode"},
+                {"name": "fans_manual_state",                        "type": "uint8_t",  "start":  5, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the fans manual state"},
+                {"name": "water_pump_manual_mode",                   "type": "uint8_t",  "start":  6, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the water pump manual mode"},
+                {"name": "water_pump_manual_state",                  "type": "uint8_t",  "start":  7, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the water pump manual state"},
+                {"name": "lamp_manual_mode",                         "type": "uint8_t",  "start":  8, "length":  1, "values": "states",  "getters": ["act", "hmi", "com"], "comment": "the lamp manual mode"},
+                {"name": "lamp_manual_light_intensity",              "type": "uint8_t",  "start":  9, "length":  7, "range" : [0, 100],  "getters": ["act", "hmi", "com"], "comment": "the lamp manual light intensity"},
+                {"name": "system_status",                            "type": "uint8_t",  "start": 16, "length":  2, "values": "system",  "getters": ["hmi", "com"],        "comment": "the system status"},
+                {"name": "eeprom_status",                            "type": "uint8_t",  "start": 18, "length":  1, "values": "status",  "getters": ["hmi", "com"],        "comment": "the EEPROM status"},
+                {"name": "hmi_can_status",                           "type": "uint8_t",  "start": 19, "length":  1, "values": "status",  "getters": ["hmi", "com"],        "comment": "the CAN communication status"},
+                {"name": "hmi_node_status",                          "type": "uint8_t",  "start": 20, "length":  2, "values": "system",  "getters": ["hmi", "com"],        "comment": "the hmi status"},
+                {"name": "calibrate_light_system",                   "type": "uint8_t",  "start": 22, "length":  1, "values": "states",  "getters": ["sns", "hmi", "com"], "comment": "the light system calibration signal"},
+                {"name": "brightness_possible_max", "default": 50,   "type": "uint16_t", "start": 23, "length": 12, "range" : [0, 4095], "getters": ["sns", "hmi", "com"], "comment": "the LDR value when the lamp is completely on and there is environment light"},
+                {"name": "brightness_possible_min", "default": 4000, "type": "uint16_t", "start": 35, "length": 12, "range" : [0, 4095], "getters": ["sns", "hmi", "com"], "comment": "the LDR value when the lamp is completely off and there is no environment light"}
             ]
         },
         {
