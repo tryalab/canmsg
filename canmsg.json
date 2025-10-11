@@ -16,7 +16,6 @@
     },
     "defines": {
         "CAN_SPEED": 250000,
-        "yesno":  ["NO", "YES"],
         "states": ["OFF", "ON"],
         "status": ["OKAY", "ERROR"],
         "window": ["CLOSED", "OPENED"],
@@ -82,8 +81,7 @@
                 {"name": "temperature",                  "type": "float",    "start":  0, "length":  9, "range" : [0.0, 50.0], "getters": ["act", "hmi", "com"],        "comment": "the ambient temperature"},
                 {"name": "humidity",                     "type": "uint8_t",  "start":  9, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the ambient humidity"},
                 {"name": "dht_sensor_status",            "type": "uint8_t",  "start": 16, "length":  2, "values": "system",    "getters": ["act", "hmi", "com", "sns"], "comment": "the dht sensor status"},
-                {"name": "flow_rate_updated",            "type": "uint8_t",  "start": 18, "length":  1, "values": "yesno",     "getters": ["act"],                      "comment": "the flow rate updated"},
-                {"name": "flow_rate",                    "type": "uint16_t", "start": 19, "length":  9, "range" : [15, 500],   "getters": ["act", "hmi", "com"],        "comment": "the flow rate"},
+                {"name": "flow_rate",    "update": true, "type": "uint16_t", "start": 19, "length":  9, "range" : [15, 500],   "getters": ["act", "hmi", "com"],        "comment": "the flow rate"},
                 {"name": "flow_rate_sensor_status",      "type": "uint8_t",  "start": 28, "length":  2, "values": "system",    "getters": ["act", "hmi", "com", "sns"], "comment": "the flow rate sensor status"},
                 {"name": "light_intensity",              "type": "uint8_t",  "start": 30, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the light intensity"},
                 {"name": "light_sensor_status",          "type": "uint8_t",  "start": 37, "length":  2, "values": "system",    "getters": ["act", "hmi", "com", "sns"], "comment": "the light intensity sensor status"},
