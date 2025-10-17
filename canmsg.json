@@ -24,7 +24,9 @@
         "snssys": ["OKAY", "ERROR_CANCOM", "ERROR_SENSOR", "ERROR_ACTUATOR"],
         "hmisys": ["OKAY", "ERROR_CANCOM", "ERROR_DEVICE", "WARNING_DATETIME"],
         "comsys": ["OKAY", "ERROR_CANCOM", "ERROR_DEVICE", "ERROR_I2C", "ERROR_WIFI", "ERROR_NTP", "ERROR_MQTT"],
-        "actsys": ["OKAY", "ERROR_CANCOM", "ERROR_SENSOR", "ERROR_ACTUATOR", "ERROR_WATER_LEVEL", "WARNING_TEMPERATURE", "WARNING_HUMIDITY", "WARNING_LIGHT_INTENSITY", "WARNING_WATER_LEVEL", "WARNING_SOIL_MOISTURE"]
+        "actsys": ["OKAY", "ERROR_CANCOM", "ERROR_SENSOR", "ERROR_ACTUATOR", "ERROR_WATER_LEVEL", 
+                           "WARNING_TEMPERATURE", "WARNING_HUMIDITY", "WARNING_LIGHT_INTENSITY", 
+                           "WARNING_WATER_LEVEL", "WARNING_SOIL_MOISTURE"]
     },
     "messages": [
         {
@@ -79,20 +81,20 @@
             "id": "0x103",
             "setter": "sns",
             "signals": [
-                {"name": "light_calibration_value",      "type": "uint16_t", "start":  0, "length": 12, "range" : [0, 4095],   "getters": ["hmi"],                      "comment": "the LDR raw values"},
-                {"name": "temperature",                  "type": "float",    "start":  0, "length":  9, "range" : [0.0, 50.0], "getters": ["act", "hmi", "com"],        "comment": "the ambient temperature"},
-                {"name": "temperature_status",           "type": "uint8_t",  "start":  9, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the temperature sensor status"},
-                {"name": "humidity",                     "type": "uint8_t",  "start": 10, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the ambient humidity"},
-                {"name": "humidity_status",              "type": "uint8_t",  "start": 17, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the humidity sensor status"},
-                {"name": "flow_rate",    "update": true, "type": "uint16_t", "start": 19, "length":  9, "range" : [15, 500],   "getters": ["act", "hmi", "com"],        "comment": "the flow rate"},
-                {"name": "flow_rate_status",             "type": "uint8_t",  "start": 28, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the flow rate sensor status"},
-                {"name": "light_intensity",              "type": "uint8_t",  "start": 29, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the light intensity"},
-                {"name": "light_intensity_status",       "type": "uint8_t",  "start": 36, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the light intensity sensor status"},
-                {"name": "water_level",                  "type": "uint8_t",  "start": 37, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the water level"},
-                {"name": "water_level_status",           "type": "uint8_t",  "start": 38, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the water level sensor status"},
-                {"name": "soil_moisture",                "type": "uint8_t",  "start": 39, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the soil moisture"},
-                {"name": "soil_moisture_status",         "type": "uint8_t",  "start": 46, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the soil moisture sensor status"},
-                {"name": "node_status",                  "type": "uint8_t",  "start": 47, "length":  2, "values": "snssys",    "getters": ["hmi", "com", "sns"],        "comment": "the sensor node status"}
+                {"name": "light_calibration_value",   "type": "uint16_t", "start":  0, "length": 12, "range" : [0, 4095],   "getters": ["hmi"],                      "comment": "the LDR raw values"},
+                {"name": "temperature",               "type": "float",    "start":  0, "length":  9, "range" : [0.0, 50.0], "getters": ["act", "hmi", "com"],        "comment": "the ambient temperature"},
+                {"name": "temperature_status",        "type": "uint8_t",  "start":  9, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the temperature sensor status"},
+                {"name": "humidity",                  "type": "uint8_t",  "start": 10, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the ambient humidity"},
+                {"name": "humidity_status",           "type": "uint8_t",  "start": 17, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the humidity sensor status"},
+                {"name": "flow_rate", "update": true, "type": "uint16_t", "start": 19, "length":  9, "range" : [15, 500],   "getters": ["act", "hmi", "com"],        "comment": "the flow rate"},
+                {"name": "flow_rate_status",          "type": "uint8_t",  "start": 28, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the flow rate sensor status"},
+                {"name": "light_intensity",           "type": "uint8_t",  "start": 29, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the light intensity"},
+                {"name": "light_intensity_status",    "type": "uint8_t",  "start": 36, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the light intensity sensor status"},
+                {"name": "water_level",               "type": "uint8_t",  "start": 37, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the water level"},
+                {"name": "water_level_status",        "type": "uint8_t",  "start": 38, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the water level sensor status"},
+                {"name": "soil_moisture",             "type": "uint8_t",  "start": 39, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the soil moisture"},
+                {"name": "soil_moisture_status",      "type": "uint8_t",  "start": 46, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the soil moisture sensor status"},
+                {"name": "node_status",               "type": "uint8_t",  "start": 47, "length":  2, "values": "snssys",    "getters": ["hmi", "com", "sns"],        "comment": "the sensor node status"}
             ]
         },
         {
