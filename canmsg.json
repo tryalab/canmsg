@@ -94,7 +94,7 @@
                 {"name": "water_level_status",        "type": "uint8_t",  "start": 38, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the water level sensor status"},
                 {"name": "soil_moisture",             "type": "uint8_t",  "start": 39, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the soil moisture"},
                 {"name": "soil_moisture_status",      "type": "uint8_t",  "start": 46, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the soil moisture sensor status"},
-                {"name": "sssss_node_status",         "type": "uint8_t",  "start": 47, "length":  2, "values": "snssys",    "getters": ["hmi", "com", "sns"],        "comment": "the sensor node status"}
+                {"name": "node_status",               "type": "uint8_t",  "start": 47, "length":  2, "values": "snssys",    "getters": ["hmi", "com", "sns"],        "comment": "the sensor node status"}
             ]
         },
         {
@@ -111,7 +111,7 @@
                 {"name": "heater_status",        "type": "uint8_t", "start": 13, "length": 1, "values": "status", "getters": ["com", "hmi"],        "comment": "the heating element status"},
                 {"name": "window_state",         "type": "uint8_t", "start": 14, "length": 1, "values": "wstate", "getters": ["com", "hmi"],        "comment": "the window state"},
                 {"name": "window_status",        "type": "uint8_t", "start": 15, "length": 1, "values": "status", "getters": ["com", "hmi"],        "comment": "the window status"},
-                {"name": "aaaaa_node_status",    "type": "uint8_t", "start": 16, "length": 4, "values": "actsys", "getters": ["com", "hmi", "act"], "comment": "the actuator node status"}
+                {"name": "node_status",          "type": "uint8_t", "start": 16, "length": 4, "values": "actsys", "getters": ["com", "hmi", "act"], "comment": "the actuator node status"}
             ]
         }, 
         {
