@@ -22,8 +22,8 @@
         "system": ["OKAY", "ERROR", "WARNING"],
         "serial": ["DISCONNECTED", "CONNECTED"],
         "snssys": ["OKAY", "ERROR_CANCOM", "ERROR_SENSOR", "ERROR_ACTUATOR"],
-        "hmisys": ["OKAY", "ERROR_CANCOM", "ERROR_DEVICE", "WARNING_DATETIME"],
-        "comsys": ["OKAY", "ERROR_CANCOM", "ERROR_DEVICE", "ERROR_I2C", "ERROR_WIFI", "ERROR_NTP", "ERROR_MQTT"],
+        "hmisys": ["OKAY", "ERROR_CANCOM", "ERROR_EEPROM", "WARNING_DATETIME"],
+        "comsys": ["OKAY", "ERROR_CANCOM", "ERROR_SDCARD", "ERROR_I2C", "ERROR_WIFI", "ERROR_NTP", "ERROR_MQTT"],
         "actsys": ["OKAY", "ERROR_CANCOM", "ERROR_SENSOR", "ERROR_ACTUATOR", "ERROR_WATER_LEVEL", 
                            "WARNING_TEMPERATURE", "WARNING_HUMIDITY", "WARNING_LIGHT_INTENSITY", 
                            "WARNING_WATER_LEVEL", "WARNING_SOIL_MOISTURE"]
