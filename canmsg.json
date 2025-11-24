@@ -69,12 +69,12 @@
             "id": "0x102",
             "setter": "hmi",
             "signals": [
-                {"name": "watering_time_max",          "default": 15,  "type": "uint8_t",  "start":  0, "length":  5, "range": [10, 31],    "getters": ["act", "hmi", "com"], "comment": "the max time for a watering cycle"},
-                {"name": "watering_volume_max",        "default": 300, "type": "uint16_t", "start":  5, "length": 11, "range": [100, 2047], "getters": ["act", "hmi", "com"], "comment": "the max used water in a watering cycle"},
-                {"name": "light_intensity_target_min", "default": 50,  "type": "uint8_t",  "start": 16, "length":  7, "range": [0, 100],    "getters": ["act", "hmi", "com"], "comment": "the min light intensity"},
-                {"name": "light_intensity_target_max", "default": 80,  "type": "uint8_t",  "start": 23, "length":  7, "range": [0, 100],    "getters": ["act", "hmi", "com"], "comment": "the max light intensity"},
-                {"name": "temperature_possible_min",   "default": 10,  "type": "uint8_t",  "start": 30, "length":  7, "range": [0, 50],     "getters": ["sns", "hmi", "com"], "comment": "the min possible temperature"},
-                {"name": "temperature_possible_max",   "default": 30,  "type": "uint8_t",  "start": 37, "length":  7, "range": [0, 50],     "getters": ["sns", "hmi", "com"], "comment": "the max possible temperature"}
+                {"name": "watering_cycle_time",        "default": 5,   "type": "uint8_t",  "start":  0, "length":  4, "range": [5, 15],     "getters": ["act", "hmi", "com", "sns"], "comment": "the max time for a watering cycle"},
+                {"name": "watering_volume_max",        "default": 300, "type": "uint16_t", "start":  4, "length": 11, "range": [100, 2047], "getters": ["act", "hmi", "com"],        "comment": "the max used water in a watering cycle"},
+                {"name": "light_intensity_target_min", "default": 50,  "type": "uint8_t",  "start": 15, "length":  7, "range": [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the min light intensity"},
+                {"name": "light_intensity_target_max", "default": 80,  "type": "uint8_t",  "start": 22, "length":  7, "range": [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the max light intensity"},
+                {"name": "temperature_possible_min",   "default": 10,  "type": "uint8_t",  "start": 29, "length":  7, "range": [0, 50],     "getters": ["sns", "hmi", "com"],        "comment": "the min possible temperature"},
+                {"name": "temperature_possible_max",   "default": 30,  "type": "uint8_t",  "start": 36, "length":  7, "range": [0, 50],     "getters": ["sns", "hmi", "com"],        "comment": "the max possible temperature"}
             ] 
         },
         {
