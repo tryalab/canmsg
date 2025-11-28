@@ -91,10 +91,10 @@
                 {"name": "light_intensity",           "type": "uint8_t",  "start": 29, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the light intensity"},
                 {"name": "light_intensity_status",    "type": "uint8_t",  "start": 36, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the light intensity sensor status"},
                 {"name": "water_level",               "type": "uint8_t",  "start": 37, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the water level"},
-                {"name": "water_level_status",        "type": "uint8_t",  "start": 38, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the water level sensor status"},
-                {"name": "soil_moisture",             "type": "uint8_t",  "start": 39, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the soil moisture"},
-                {"name": "soil_moisture_status",      "type": "uint8_t",  "start": 46, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the soil moisture sensor status"},
-                {"name": "node_status",               "type": "uint8_t",  "start": 47, "length":  2, "values": "snssys",    "getters": ["hmi", "com", "sns"],        "comment": "the sensor node status"}
+                {"name": "water_level_status",        "type": "uint8_t",  "start": 44, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the water level sensor status"},
+                {"name": "soil_moisture",             "type": "uint8_t",  "start": 45, "length":  7, "range" : [0, 100],    "getters": ["act", "hmi", "com"],        "comment": "the soil moisture"},
+                {"name": "soil_moisture_status",      "type": "uint8_t",  "start": 52, "length":  1, "values": "status",    "getters": ["act", "hmi", "com", "sns"], "comment": "the soil moisture sensor status"},
+                {"name": "node_status",               "type": "uint8_t",  "start": 53, "length":  2, "values": "snssys",    "getters": ["hmi", "com", "sns"],        "comment": "the sensor node status"}
             ]
         },
         {
